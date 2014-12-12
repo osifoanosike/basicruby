@@ -30,8 +30,8 @@ class Vehicle
 		@price = price
 	end
 
-	def show_details
-
+	def show_content
+		puts "\n#{self.class} Details \nName: #{@name} \nPrice: #{@price}\nDealer: #{@dealer}"
 	end
 
 	def change_price(new_price)
@@ -48,25 +48,25 @@ class Bike < Vehicle
 		@dealer = dealer
 	end
 
-	def show_content
-		puts "Bike Details \nName: #{@name} \nPrice : #{@price}\nDealer: #{@dealer}"
-	end
+	
 end
 
 
 #Question 6
-# motorbike = Bike.new("Harley Davidson", "100000", "Dealdey Limited") #creates a new bike object
+motorbike = Bike.new("Harley Davidson", "100000", "Dealdey Limited") #creates a new bike object
 
-# motorbike.show_content #showmotorbikes the bike's initial details
+motorbike.show_content #showmotorbikes the bike's initial details
 
-# motorbike.change_price(3700) #change its price
+motorbike.change_price(3700) #change its price
 
-# motorbike.show_content #showmotorbikes the bike's updated details
+motorbike.show_content #showmotorbikes the bike's updated details
+
+
+
 
 
 
 #QUESTION7
-
 class MySentence
 	def initialize(sentence)
 		@sentence = sentence
@@ -77,5 +77,6 @@ class MySentence
 	end
 end
 
-test = MySentence.new("Anosike Osifo is a developer")
-puts test.to_s
+#Question 7
+# test = MySentence.new("Anosike Osifo is a developer")
+# puts test.to_s
