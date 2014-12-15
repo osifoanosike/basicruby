@@ -80,3 +80,75 @@ end
 #Question 7
 # test = MySentence.new("Anosike Osifo is a developer")
 # puts test.to_s
+
+
+
+
+
+#QUESTION 8 & 9
+class Array
+	#uqestion 8
+	def power(x)
+		self.map { |element| element ** x }
+	end
+
+	#question 9
+	def hashify
+		holder = Hash.new(0)
+		for item in self
+			key = "#{item}".length
+			if holder.has_key?(key)
+				holder[key] << item
+			else
+				holder[key] = [item]
+			end
+		end
+
+		puts holder.inspect
+	end
+
+	#question 10
+	def do_grouping
+		holder = { "odd" => [], "even" => [] }
+
+		self.inject(holder) do |final, elem|
+			eLength = "#{elem}".length
+			# puts "length: #{eLength}, element: #{elem}, Type: #{elem.class}"
+			if eLength % 2 == 0
+				holder["even"] << elem
+			else
+				holder["odd"] << elem
+			end
+		end
+		puts holder
+	end
+end
+
+#Question 8
+arr = Array[10, 3, 4, 6]
+puts "#{arr.power(2)}"
+
+
+#Question 9
+arr2 = ["tobi", 15, "age", 3, "footballer", "footballee", "Josh"]
+arr2.hashify
+
+
+#QUESTION 10
+arr3= [15, "age", 3, "footballer", "footballee", "Josh"]
+arr3.do_grouping
+
+
+
+#QUESTION 11
+
+def pas_triangle
+
+end
+
+
+
+
+
+
+
