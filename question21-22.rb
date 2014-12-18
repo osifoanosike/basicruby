@@ -1,8 +1,3 @@
-class Interest
-
-
-end
-
 
 #QUESTION 21
 def factorial_exception(n)
@@ -30,9 +25,6 @@ class Name
 		end	
 	end
 end
-
-
-#QUESTION 23
 
 
 
