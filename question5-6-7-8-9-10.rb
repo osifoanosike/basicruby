@@ -52,16 +52,6 @@ class Bike < Vehicle
 end
 
 
-#Question 6
-motorbike = Bike.new("Harley Davidson", "100000", "Dealdey Limited") #creates a new bike object
-
-motorbike.show_content #showmotorbikes the bike's initial details
-
-motorbike.change_price(3700) #change its price
-
-motorbike.show_content #showmotorbikes the bike's updated details
-
-
 
 
 
@@ -77,9 +67,7 @@ class MySentence
 	end
 end
 
-#Question 7
-# test = MySentence.new("Anosike Osifo is a developer")
-# puts test.to_s
+
 
 
 
@@ -124,26 +112,45 @@ class Array
 	end
 end
 
+
+
+#Question 6
+motorbike = Bike.new("Harley Davidson", "100000", "Dealdey Limited") #creates a new bike object
+
+motorbike.show_content #showmotorbikes the bike's initial details
+
+motorbike.change_price(3700) #change its price
+
+motorbike.show_content #showmotorbikes the bike's updated details
+
+
+#Question 7
+# test = MySentence.new("Anosike Osifo is a developer")
+# puts test.to_s
+
+
 #Question 8
 arr = Array[10, 3, 4, 6]
 puts "#{arr.power(2)}"
 
 
 #Question 9
+puts"#Question 9"
 arr2 = ["tobi", 15, "age", 3, "footballer", "footballee", "Josh"]
 arr2.hashify
 
 
 #QUESTION 10
+puts"#Question 10"
 arr3= [15, "age", 3, "footballer", "footballee", "Josh"]
 arr3.do_grouping
 
 
 
 #QUESTION 11
-
+puts"#Question 11"
 def pas_triangle
-	
+
 end
 
 

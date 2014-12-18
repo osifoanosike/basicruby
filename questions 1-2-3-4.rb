@@ -14,7 +14,7 @@ def check_occurence(string)
 		end
 	end
 	
-	puts freq
+	puts "the frequecy of alphabets in the string #{string} is: #{freq}"
 end
 
 
@@ -26,7 +26,7 @@ def replace_regex
 
 	altered = entry.gsub(/[aeiou]/i, '*')
 
-	puts "the text you entered was modified to #{altered}"
+	puts "the text you entered:#{entry} was modified to #{altered}"
 end
 
 
@@ -66,6 +66,7 @@ end
 
 
 #question 1
+puts"#Question 1"
 # check_occurence("peteer joshua")
 
 #question 2

@@ -81,7 +81,7 @@ def search_text(text, search_param)
 	puts "Result: #{result}";
 end
 
-
+#QUESTION 17
 def sum_time(time1, time2)
 	timeA = time1.split(':').map(&:to_i)
 	timeB = time2.split(':').map(&:to_i)
@@ -146,5 +146,5 @@ search_text("Titobi is not at home and he's 10 too", "t")
 
 #Question 17
 puts "\n#Question 17"
-#("1:45:34", "0:15:58")
-sum_time("11:23:07","22:53:45")
+# sum_time("11:23:07","22:53:45")
+sum_time("11:23:07","22:53:45","0:23:23","23:45:56")
