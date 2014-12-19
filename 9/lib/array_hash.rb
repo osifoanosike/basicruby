@@ -1,5 +1,5 @@
 module ArrayHash
-	class Array
+	class ArrayX < Array
 		#question 9
 		def execute
 			holder = Hash.new(0)

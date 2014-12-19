@@ -34,6 +34,6 @@ module SumTime
 		if sum[0] > 24 #group into days
 			sum[0] = "1 day & #{sum[0] % 24}"
 		end
-		puts sum.join(':')
+		puts "sum of the follow time values: #{time1} and #{time2} results in: \n#{sum.join(':')}"
 	end
 end

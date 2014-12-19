@@ -3,6 +3,7 @@ module NameException
 	class Name
 
 		def initialize(lastname, firstname)
+			# lastname.class
 			if lastname.empty? || firstname.empty?
 				raise "Neither Lastname nor Firstname value can be null"
 			elsif !firstname[0].match(/[A-Z]/)

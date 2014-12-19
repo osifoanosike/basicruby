@@ -1,5 +1,5 @@
 module HashInject
-	class Array
+	class ArrayX < Array
 		#question 10
 		def do_grouping
 			holder = { "odd" => [], "even" => [] }
