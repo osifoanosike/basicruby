@@ -26,6 +26,33 @@ class Name
 	end
 end
 
+class FileOps
+	require 'csv'
+
+	def read_per_row
+		# require 'CSV'
+		count = 0
+		vals = CSV.foreach("/home/osifo/dev/playground/ruby/another.csv") { |line| puts "line #{count+=1}. #{line.to_s}" }
+		#puts "file content #{vals}"
+	end
+
+	def read_file
+		content = CSV.read("/home/osifo/dev/playground/ruby/my_new_file.csv")
+		puts content
+	end
+
+	def write_to_file(file_name)
+		csv_file = File.open("/home/osifo/dev/playground/ruby/#{file_name}", "wb")
+		# puts csv_file.path
+		CSV.open("#{csv_file.path}", "wb") do |content|
+			content << ["Lastname", "Firstname", "Email Address"]
+			content << ["Anosike", "Borderless", "osifo@dealdey.com"]
+		end
+	end
+
+end
+
+
 
 
 #QUESTION 21
@@ -34,3 +61,14 @@ factorial_exception(4)
 
 #Question 22
 Name.new("tobi", "Anthony")
+
+fileOps = FileOps.new
+
+puts "Output of READ_PER_ROW"
+fileOps.read_per_row
+
+puts "Output of WRITE_TO_FILE"
+# fileOps.write_to_file("another.csv")
+
+puts "Output of READ_FILE"
+fileOps.read_file
