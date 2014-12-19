@@ -12,7 +12,7 @@ module PalindromeTest
 			response = is_palindrome?(input) ? "Yep!, a palindrome"  : "Nah.. not a plaindrome"
 			puts response
 
-			palindrome #Does a recursive call on this method
+			execute #Does a recursive call on this method
 		end
 		abort("closing program..")
 	end

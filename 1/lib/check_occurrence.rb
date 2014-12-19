@@ -1,8 +1,10 @@
 module CheckOccurrence
-	def evaluate(string)
+	def evaluate
 		#creates a hash to hold frequency
 		freq = Hash.new(0) 
 
+		puts "enter string to evaluate"
+		string = gets.chomp
 		#checks if the hash has a key containing the value
 		string.each_char do |xter|
 			if freq.keys.grep(/#{xter}/i)

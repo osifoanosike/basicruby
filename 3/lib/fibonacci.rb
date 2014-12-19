@@ -1,9 +1,10 @@
 #QUESTION 3
 module Fibonacci
-	def fibonacci(max_val)
+	def execute(max_val)
 		init1 = 0
 		init2 = 1
 
+		puts "fibonacci sequence for #{max_val} is:"
 		while init1 <= max_val
 			yield init1
 

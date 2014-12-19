@@ -74,7 +74,7 @@ puts"#Question 1"
 
 
 #question3
-# fibonacci(1000) { |val| puts val }
+
 
 #question4
 palindrome

@@ -1,10 +1,10 @@
 #QUESTION 5
-module Customer
-	def Customer
+module CustomerAccount
+	class Customer
 		def initialize(name, account_no) #initialization
 			@name = name
-			@account_no = account_no + 1
-			balance = 1000
+			@account_no = Integer(account_no) + 1
+			@balance = 1000
 		end
 
 		def deposit(amount)
@@ -20,5 +20,8 @@ module Customer
 			end		
 		end
 
+		def account_info
+			puts "Account Details:\nName: #{@name}\nAccount Number: #{@account_no}\nBalance: #{@balance}"
+		end
 	end
 end
