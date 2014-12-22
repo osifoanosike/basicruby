@@ -1,7 +1,7 @@
 #QUESTION 3
 module Fibonacci
 	def execute(max_val)
-		init1 = 0
+		init1 = 1
 		init2 = 1
 
 		puts "fibonacci sequence for #{max_val} is:"
