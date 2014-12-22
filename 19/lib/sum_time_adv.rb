@@ -3,7 +3,7 @@ module SumTimeAdv
 	def execute(*time_vals)
 
 		time1 = time_vals.shift#here i take out the first element to use as an index for all operations
-		puts "first value: #{time1}"
+		# puts "first value: #{time1}"
 		time_vals.each { |time| puts "time_val: #{time}" }
 		
 		sum = []
@@ -41,8 +41,8 @@ module SumTimeAdv
 			sum[0] /= 3600 #convert back to hours
 			sum[1] /= 60 #convert back to minutes
 
-			time1 = sum.join(':')
-			puts "Time1 val: #{time1}"
+			time1 = sum.join(':') #update Time1 value for use in next iteration
+			# puts "Time1 val: #{time1}"
 		end
 
 		nos_of_days = sum[0].to_i / 24 #group into days
