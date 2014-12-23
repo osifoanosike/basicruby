@@ -50,6 +50,16 @@ class FileOps
 		end
 	end
 
+	def read_from_file(file_name)
+		# csv_file = File.open("/home/osifo/dev/playground/ruby/#{file_name}")
+		file_dir = "/home/osifo/dev/playground/ruby/#{file_name}"
+
+		CSV.open("long_path#{file_dir.path}", "r+") do |content|
+			content << ["Developer", ".NET, RoR, HTML5, Javascript, CSS3", "Male"]
+		end
+
+	end
+
 end
 
 
