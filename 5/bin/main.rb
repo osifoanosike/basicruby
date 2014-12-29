@@ -13,23 +13,23 @@ abort("exiting...") if option.match(/q/i)
 
 case Integer(option)
 when 1
-	puts "select and amount to withdraw"
-	withdrawAmt = Integer(gets.chomp)
-	puts "processing"
-	custAcct.withdraw(withdrawAmt)
-	puts "Withdrawal completed"
-	custAcct.account_info
+  puts "select and amount to withdraw"
+  withdrawAmt = Integer(gets.chomp)
+  puts "processing"
+  custAcct.withdraw(withdrawAmt)
+  puts "Withdrawal completed"
+  custAcct.account_info
 when 2
-	puts "select and amount to deposit"
-	depositAmt = Integer(gets.chomp)
-	puts "processing"
-	custAcct.deposit(depositAmt)
-	puts "Withdrawal completed"
-	custAcct.account_info
+  puts "select and amount to deposit"
+  depositAmt = Integer(gets.chomp)
+  puts "processing"
+  custAcct.deposit(depositAmt)
+  puts "Withdrawal completed"
+  custAcct.account_info
 when 3
-	custAcct.account_info
+  custAcct.account_info
 else
-	puts "Looks like you've selected an invalid option. Please try again"
+  puts "Looks like you've selected an invalid option. Please try again"
 end
 
 

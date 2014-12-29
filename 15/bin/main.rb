@@ -10,9 +10,9 @@ input = gets.chomp
 puts input.class
 
 if !input.match(/\d+/) #if entry isnt an integer
-	puts "Non-integer value entered"
+  puts "Non-integer value entered"
 else
-	prime.get_primes(Integer(input)) 
+  prime.get_primes(Integer(input)) 
 end
 
 
