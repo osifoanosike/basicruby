@@ -1,4 +1,8 @@
 require_relative '../lib/PascalTriangle.rb'
-include PascalTriangle
 pascal = Pascal.new
-pascal.execute(7) {|x| print "#{x} " } 
+
+puts "Pascal Triangle Calculator\nPlease enter maximum number:"
+max = gets.chomp.to_i
+
+pascal.execute(max) {|x| print "#{x} " } 
+puts

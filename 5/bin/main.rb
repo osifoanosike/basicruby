@@ -1,12 +1,9 @@
 require_relative '../lib/customer_account.rb'
-include CustomerAccount
 
 custAcct = Customer.new("Osifo", "1234567890")
-
 custAcct.account_info
 
 puts "\nSelect an operation to perform\nWithdrawal: 1\nDeposit: 2\nInquiry: 3 or Press Q to quit."
-
 option = gets.chomp
 
 abort("exiting...") if option.match(/q/i)

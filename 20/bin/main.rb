@@ -1,6 +1,4 @@
 require_relative '../lib/interest_calc.rb'
-include InterestCalc
-
 
 print 'Enter principal amount: '
 p = gets.chomp.to_i

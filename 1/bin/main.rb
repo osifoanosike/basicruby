@@ -1,5 +1,8 @@
 require_relative '../lib/check_occurrence.rb'
-include CheckOccurrence
 
+occur = Occurrence.new
 
-evaluate
+puts "enter string to evaluate"
+string = gets.chomp
+
+occur.evaluate(string)

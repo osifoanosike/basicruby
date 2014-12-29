@@ -1,13 +1,13 @@
 require_relative '../lib/highlight_search.rb'
-include HighlightSearch
-searchOps = SearchOps.new
-#Question 16
-puts "\n#Question 16"
 
-puts "Enter a sentence"
+puts "Enter a sentence you wish to search"
 sentence = gets.chomp
 
 puts "what character\(s\) do you want to search for?"
-search = gets.chomp
-# search_text("Titobi is not at home and he's 10 too", "t")
-searchOps.search_text(sentence, search)
+search_param = gets.chomp
+
+searchOps = SearchOps.new
+result = searchOps.search_text(sentence, search_param)
+
+puts "Search for \"#{search_param}\" returned #{result["count"]} matches"
+puts "Result: #{result["search_result"]}";

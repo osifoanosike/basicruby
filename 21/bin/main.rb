@@ -1,5 +1,5 @@
 require_relative '../lib/factorial_exception.rb'
-include FactorialException
+
 fac = FactorialOps.new
 puts "Enter a value to get its factorial, negative numbers result in errors"
 input = gets.chomp

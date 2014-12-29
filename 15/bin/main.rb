@@ -1,8 +1,6 @@
 require_relative '../lib/prime_test.rb'
-include PrimeTest
 
 prime = PrimeOps.new
-#Question 15
 puts "\n#Question 15"
 puts "Enter an integer value to find its prime numbers"
 input = gets.chomp

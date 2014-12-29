@@ -7,6 +7,4 @@ puts "What power do you want raise the elements to?"
 pow = Integer(gets.chomp)
 
 arr = ArrayX.new(arr)
-# puts "array: #{arr}, power: #{pow}"
-
 puts "The Power Array is: #{arr.power(pow)}"
