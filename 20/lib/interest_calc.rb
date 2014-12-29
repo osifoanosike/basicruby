@@ -1,23 +1,22 @@
 module InterestCalc
 	class Interest
-		def initialize(args, &block)
-			if block_given?
-				p block.call(args)
-			else
-				puts "no block passed"
-			end
-		end
-		def simple_calc
+	  attr_accessor :principal, :time, :rate
 
-		end
+	  def initialize
+	    yield self if block_given?
+	    raise ArgumentError if principal.nil? || time.nil? || rate.nil?
+	  end
+	  
+	  def simple_amount
+	    principal + principal * time * rate / 100
+	  end
 
-		def compound_calc
+	  def compound_amount
+	    principal * ((1 + rate / 100.to_f) ** time)
+	  end
 
-		end
-
-		def diff_in_calc
-			
-		end
+	  def diff_in_amount
+	    compound_amount - simple_amount
+	  end
 	end
-
 end

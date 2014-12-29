@@ -1,7 +1,6 @@
 
 module NameException
 	class Name
-
 		def initialize(lastname, firstname)
 			# lastname.class
 			if lastname.empty? || firstname.empty?
