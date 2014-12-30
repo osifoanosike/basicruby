@@ -10,7 +10,8 @@ puts input.class
 if !input.match(/\d+/) #if entry isnt an integer
   puts "Non-integer value entered"
 else
-  prime.get_primes(Integer(input)) 
+  puts "Prime numbers between 1 and #{input}" 
+  puts "#{prime.get_primes(Integer(input)) }" 
 end
 
 

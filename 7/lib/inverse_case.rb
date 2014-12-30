@@ -1,9 +1,9 @@
-class MySentence
+class String
   def initialize(sentence)
     @sentence = sentence
   end
 
   def to_s
-    altered = @sentence.split(" ").each { |word| word = word.swapcase! }.join(" ")
+    altered = @sentence.swapcase!
   end
 end

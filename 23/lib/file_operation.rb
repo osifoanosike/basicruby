@@ -18,8 +18,6 @@ class FileOps
     array.each do |elem|
       elem << "s" if freq_result[elem] > 1
     end
-
-    # puts "pluralized array: #{array}"
   end
 
   def read_write(file_name)
@@ -34,7 +32,6 @@ class FileOps
   end
 
   def read_from_file(file_name)
-    # csv_file = File.open("/home/osifo/dev/playground/ruby/#{file_name}")
     file_dir = "/home/osifo/dev/trainings/basicruby/23/lib/#{file_name}"
     from_file = CSV.read("#{file_dir}", headers: true)   
   end

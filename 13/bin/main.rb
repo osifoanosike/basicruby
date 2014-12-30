@@ -10,4 +10,3 @@ if input.match(/[0-9]/)
 else
 	puts "A non-integer value was entered. Try again"
 end
-# factorial(6)
