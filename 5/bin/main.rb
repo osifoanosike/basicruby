@@ -13,14 +13,14 @@ when 1
   puts "select and amount to withdraw"
   withdrawAmt = Integer(gets.chomp)
   puts "processing"
-  custAcct.withdraw(withdrawAmt)
+  custAcct - withdrawAmt
   puts "Withdrawal completed"
   custAcct.account_info
 when 2
   puts "select and amount to deposit"
   depositAmt = Integer(gets.chomp)
   puts "processing"
-  custAcct.deposit(depositAmt)
+  custAcct + depositAmt
   puts "Withdrawal completed"
   custAcct.account_info
 when 3

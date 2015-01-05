@@ -6,11 +6,11 @@ class Customer
     @balance = 1000
   end
 
-  def deposit(amount)
+  def +(amount) #deposit
     @balance = @balance + amount
   end
 
-  def withdraw(amount)
+  def -(amount) #withdraw
     if @balance > amount
       puts "Transaction proessing.." 
       @balance = @balance - amount

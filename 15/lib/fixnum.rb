@@ -1,6 +1,6 @@
-class Fixnum
-  require 'prime'
+require 'prime'
 
+class Fixnum
   def get_primes
     primes = []
 

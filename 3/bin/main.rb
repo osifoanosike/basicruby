@@ -1,4 +1,5 @@
-require_relative '../lib/fibonacci.rb'
+require_relative '../lib/fixnum.rb'
 
-fib = FibonacciOps.new
-fib.execute(1000) { |val| puts val }
+#user input value is fixed ti 1000 as sepcified in question
+puts "fibonacci sequence for #{1000} is:"
+1000.fibonacci_sequence { |val| puts val }

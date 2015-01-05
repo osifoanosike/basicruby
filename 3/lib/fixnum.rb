@@ -1,10 +1,10 @@
-class FibonacciOps
-  def execute(max_val)
+class Fixnum
+  def fibonacci_sequence
     init1 = 1
     init2 = 1
 
-    puts "fibonacci sequence for #{max_val} is:"
-    while init1 <= max_val
+    puts "fibonacci sequence for #{self} is:"
+    while init1 <= self
       yield init1
 
       temp = init1

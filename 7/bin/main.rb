@@ -1,4 +1,4 @@
-require_relative '../lib/inverse_case.rb'
+require_relative '../lib/string.rb'
 
 puts "This illustrates an overriding of the \"to_s\" method"
 puts "enter a string to be inverted"

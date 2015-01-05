@@ -1,6 +1,9 @@
-class Time
+module SumTime
   require 'time'
-  TIME_REGEX = /^([0-1]?\d?|[2]?[0-3]?)[:][0-5]?\d?[:][0-5]?\d?$/
+  TIME_REGEX =  /^([0]?\d|1\d|2[0-3]):([0-5]\d):([0-5]\d)$/
+  # /^([0-1]?\d?|[2]?[0-3]?)[:][0-5]?\d?[:][0-5]?\d?$/
+
+
 
   def self.sum_time(time1,time2)
     # time2 = time2.sec + time2.min * 60 + time2.hour * 3600
@@ -18,11 +21,10 @@ class Time
       total_time = sum_time(time1, time2)
       
       total = "#{total_time.hour}:#{total_time.min}:#{total_time.sec}"
-      # total = "#{ total_time.hour }:" + "#{ total_time.min }:" + "#{ total_time.sec }"
       day = total_time.day - time1.day
-      total = day > 0 ? "1 day & #{total}" : "#{total}"
+      total = day > 0 ? "#{day} #{day > 1 ? "days" : "day" } & #{total}" : "#{total}"
     else
-      Raise "Invalid time values supplied"
+      raise "Invalid time values supplied"
     end
   end
 end

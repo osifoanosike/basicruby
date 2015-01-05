@@ -1,4 +1,4 @@
-require_relative '../lib/prime_test.rb'
+require_relative '../lib/fixnum.rb'
 
 # prime = PrimeOps.new
 puts "\n#Question 15"

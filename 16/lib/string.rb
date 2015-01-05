@@ -1,8 +1,8 @@
 #QUESTION 16
-class SearchOps
-  def search_text(text, search_param)
+class String
+  def search_text( search_param)
     match_count = 0
-    result = text.gsub(/#{search_param}/) do |match|
+    result = self.gsub(/#{search_param}/i) do |match|
       match_count += 1
       "(#{match})"
     end

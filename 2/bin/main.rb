@@ -1,4 +1,6 @@
-require_relative '../lib/replace_regex.rb'
+require_relative '../lib/string.rb'
 
-reg = RegexOps.new
-reg.replace_regex
+puts "Please enter a text:"
+entry = gets.chomp
+
+puts "the text you entered:#{entry} was modified to #{entry.replace_regex}"

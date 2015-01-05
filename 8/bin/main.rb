@@ -1,4 +1,4 @@
-require_relative '../lib/power_array.rb'
+require_relative '../lib/array.rb'
 
 puts "Enter a list of comma separated values"
 arr = gets.chomp.split(',').map(&:to_i)

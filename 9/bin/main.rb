@@ -1,6 +1,7 @@
-require_relative '../lib/array_hash.rb'
+require_relative '../lib/array.rb'
 
-puts "#Question 9"
+puts "Enter a comma separated list of items"
+input = gets.chomp
 
-arr2 = ArrayX["tobi", 15, "age", 3, "footballer", "footballee", "Josh"]
-puts arr2.execute
+arr = input.split(',')
+puts "Array Hash: #{arr.create_hash}"

@@ -1,10 +1,10 @@
 require 'time'
 
-class Time
-  REGEX = /^([0-1]?\d?|[2]?[0-3]?)[:][0-5]?\d?[:][0-5]?\d?$/
+module SumTime
+  TIME_REGEX =  /^([0]?\d|1\d|2[0-3]):([0-5]\d):([0-5]\d)$/
 
   def self.valid?(str)
-    REGEX =~ str
+    TIME_REGEX =~ str
   end
 
   def self.sum(times)
@@ -30,5 +30,4 @@ class Time
       raise InvalidTimeError
     end
   end
-
 end
