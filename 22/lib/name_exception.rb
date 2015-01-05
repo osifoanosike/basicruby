@@ -1,6 +1,10 @@
 require_relative 'wrong_argument.rb'
 class Name
-  def initialize(lastname, firstname)
+  def initialize(input)
+    names = input.split(',')
+    lastname = names[0].strip
+    firstname = names[1].strip
+
     if lastname.empty? || firstname.empty?
       raise WrongArgument, "Neither Lastname nor Firstname value can be null"
     elsif !firstname[0].match(/[A-Z]/)
