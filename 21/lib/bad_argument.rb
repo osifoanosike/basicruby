@@ -1,2 +1,2 @@
-class WrongArgument < StandardError
+class BaDArgument < StandardError
 end

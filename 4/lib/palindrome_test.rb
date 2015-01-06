@@ -1,4 +1,4 @@
-class String
+class Palindrome
   def is_palindrome?(string)
     string  == string.reverse ? true : false
   end

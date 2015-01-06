@@ -3,7 +3,6 @@ class Fixnum
     init1 = 1
     init2 = 1
 
-    puts "fibonacci sequence for #{self} is:"
     while init1 <= self
       yield init1
 

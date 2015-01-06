@@ -10,7 +10,7 @@ class Fixnum
 
   def is_valid_number?
     if self < 0 
-      raise WrongArgument, "Negative numbers are not acccepted" 
+      raise BadArgument, "Negative numbers are not acccepted" 
     else
       true
     end

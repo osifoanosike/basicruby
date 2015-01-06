@@ -1,22 +1,27 @@
-#QUESTION 5
+require '../../21/lib/bad_argument.rb'
+
 class Customer
-  def initialize(name, account_no) #initialization
+  def initialize(name) #initialization
     @name = name
-    @account_no = Integer(account_no) + 1
+    @account_no = "0012345678"
     @balance = 1000
   end
 
-  def +(amount) #deposit
-    @balance = @balance + amount
+  def deposit(amount)
+    @balance = @balance + amount.to_f
   end
 
-  def -(amount) #withdraw
+  def withdraw(amount)
     if @balance > amount
       puts "Transaction proessing.." 
       @balance = @balance - amount
     else
       puts "Insufficient funds"
     end   
+  end
+
+  def new_account
+    @account_no = @account_no.to_i + 1
   end
 
   def account_info
