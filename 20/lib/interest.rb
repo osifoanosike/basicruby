@@ -1,12 +1,16 @@
 class Interest
   RATE = 10
-  
-  def initialize(principal, time)
-    yield self if block_given?
-    raise ArgumentError, "You used an invalid value as argument to this method" if principal <= 0 || time <= 0
+  attr_writer :principal, :time
 
-    @principal = principal
-    @time = time
+  def initialize
+    if block_given?
+      yield self
+      if @principal <= 0 || @time <= 0 
+        raise "Invalid Principal/Time values supplied."
+      end
+    else
+      raise "No block given"
+    end
   end
     
   def simple_amount

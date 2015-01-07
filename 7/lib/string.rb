@@ -4,6 +4,6 @@ class String
   end
 
   def to_s
-    altered = @sentence.swapcase!
+    altered = @sentence.swapcase
   end
 end
