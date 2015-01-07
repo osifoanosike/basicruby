@@ -1,6 +1,6 @@
 class Palindrome
   def is_palindrome?(string)
-    string  == string.reverse ? true : false
+    string  == string.reverse
   end
 
   def execute

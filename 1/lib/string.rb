@@ -5,11 +5,7 @@ class String
       
       #checks if the hash has a key containing the value
       self.gsub(' ', '').each_char do |xter|
-        if freq.has_key?(/#{xter}/i)
-          (freq[xter] = freq[xter] + 1)
-        else
-          freq[xter] += 1
-        end
+        freq[xter] += 1
       end     
       puts "the frequecy of alphabets in the string #{self} is:\n#{freq}"
   end
