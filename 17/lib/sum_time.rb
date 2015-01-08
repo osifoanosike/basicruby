@@ -5,16 +5,16 @@ module SumTime
 
 
 
-  def self.sum_time(time1,time2)
+  def sum_time(time1,time2)
     # time2 = time2.sec + time2.min * 60 + time2.hour * 3600
     sum = time1 + time2.sec + time2.min * 60 + time2.hour * 3600
   end
 
-  def self.is_valid_time?(time)
+  def is_valid_time?(time)
     TIME_REGEX =~ time
   end
 
-  def self.total_time(time1, time2)
+  def total_time(time1, time2)
     if is_valid_time?(time1) && is_valid_time?(time2)
       time1 = Time.parse(time1)
       time2 = Time.parse(time2)
