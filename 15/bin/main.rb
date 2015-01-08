@@ -5,7 +5,7 @@ puts "\n#Question 15"
 puts "Enter an integer value to find its prime numbers"
 input = gets.chomp
 
-if !input.match(/\d+/) #if entry isnt an integer
+if !input.match(/^[0-9]+$/) #if entry isnt an integer
   puts "Non-integer value entered"
 else
   puts "Prime numbers between 1 and #{input}" 
