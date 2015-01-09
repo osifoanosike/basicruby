@@ -1,5 +1,5 @@
 class Array
-  def power(x)
-    self.map! { |element| element ** x }
+  def power(number)
+    self.map! { |element| element ** number }
   end
 end
