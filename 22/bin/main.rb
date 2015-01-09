@@ -1,6 +1,14 @@
 require_relative '../lib/name.rb'
-puts "Enter your Lastname, then lastname separated with a comma.\nNote empty strings are not allowed, u could try that tho *winks*"
+begin
+	puts "Enter Lastname"
+	lastname = gets.chomp
 
-name = gets.chomp
+	puts "Enter firstname"
+	firstname = gets.chomp
 
-Name.new(name)
+	Name.new(lastname, firstname)
+rescue Exception => e
+	puts "#{e.message} \n#{e.backtrace.inspect}"
+end
+
+
