@@ -7,8 +7,8 @@ begin
   puts "Enter second time value"
   time2 = gets.chomp
 
-  sum_result = SumTime.total_time(time1,time2)
+  sum_result = total_time(time1,time2)
   puts "Sum of  #{time1} and #{time2} results in: #{sum_result}"
-rescue
-  puts "An error occured while summing up the time."
+rescue Exception => e
+  puts "An error occured while summing up the time: #{e.message}\n#{e.backtrace.inspect} "
 end

@@ -1,7 +1,7 @@
 require 'time'
 
 module SumTime
-  TIME_REGEX =  /^([0]?\d|1\d|2[0-3]):([0-5]\d):([0-5]\d)$/
+  TIME_REGEX =  /^([0-1]\d|2[0-3]):([0-5]\d):([0-5]\d)$/
 
   def valid?(str)
     TIME_REGEX =~ str
