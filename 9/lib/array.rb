@@ -6,6 +6,6 @@ class Array
       key = "#{item}".strip.length
       holder[key] << item.strip
     end
-    holder.inspect
+    holder
   end
 end
