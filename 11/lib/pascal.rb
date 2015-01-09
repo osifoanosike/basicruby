@@ -1,4 +1,4 @@
-require_relative '../../13/lib/factorial.rb'
+require_relative '../../13/lib/fixnum.rb'
 
 class Pascal
   def triangle_row(max)
