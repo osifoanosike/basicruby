@@ -1,10 +1,10 @@
 class Array
   def create_hash
-    holder = Hash.new
+    holder = Hash.new{ |hash, key|  hash[key] = [] }
 
     for item in self
-      key = "#{item}".length
-      holder.has_key?(key) ? holder[key] << item : holder[key] = [item]
+      key = "#{item}".strip.length
+      holder[key] << item.strip
     end
     holder.inspect
   end
