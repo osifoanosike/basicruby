@@ -3,8 +3,8 @@ class Array
     holder = Hash.new{ |hash, key|  hash[key] = [] }
 
     for item in self
-      key = "#{item}".strip.length
-      holder[key] << item.strip
+      key = (item.is_a? String) ? item.strip.length : item
+      holder[key] << (item.is_a?(String) ? item.strip : item)
     end
     holder
   end
