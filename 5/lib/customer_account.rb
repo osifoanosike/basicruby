@@ -28,3 +28,5 @@ class Customer
     puts "Account Details:\nName: #{@name}\nAccount Number: #{@account_no}\nBalance: #{@balance}"
   end
 end
+
+#still tryina split em up
