@@ -1,6 +1,5 @@
 class Array
   def group_by_length
-    # map(&:strip).compact.group_by { |i| i.length } 
     compact.group_by { |i| i.to_s.length } 
   end
 
