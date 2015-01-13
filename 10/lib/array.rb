@@ -1,6 +1,6 @@
 class Array
   def group_by_length
-    compact.group_by { |i| i.to_s.length } 
+    group_by { |i| i.to_s.length } 
   end
 
   def sort_even_odd
