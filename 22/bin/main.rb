@@ -6,7 +6,8 @@ begin
 	puts "Enter firstname"
 	firstname = gets.chomp
 
-	Name.new(lastname, firstname)
+	name = Name.new(lastname, firstname)
+	puts name.to_s
 rescue Exception => e
 	puts "#{e.message} \n#{e.backtrace.inspect}"
 end

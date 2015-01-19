@@ -1,5 +1,6 @@
 require_relative 'wrong_argument.rb'
 class Name
+  attr_accessor :lastname, :firstname
 
   def initialize(lastname, firstname)
     if lastname.empty? || firstname.empty?
@@ -8,8 +9,11 @@ class Name
       raise WrongArgument, "First name must start with an uppercase letter"
     else
       @lastname = lastname
-      @firstname = firstname
-      puts "Name: #{lastname}, #{firstname}"
+      @firstname = firstname      
     end 
+  end
+
+  def to_s
+    "Name: #{lastname}, #{firstname}"
   end
 end
