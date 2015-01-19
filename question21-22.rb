@@ -57,9 +57,7 @@ class FileOps
     CSV.open("long_path#{file_dir.path}", "r+") do |content|
       content << ["Developer", ".NET, RoR, HTML5, Javascript, CSS3", "Male"]
     end
-
   end
-
 end
 
 
