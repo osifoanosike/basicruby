@@ -40,14 +40,16 @@ class FileOps
     file_dir = "../lib/csv_output.txt"
 
     File.open("#{file_dir}", "w+") do |content|
-      headers.each do |header|
-        content.puts "#{header}\n"
-        csv_file.each do |row|
-         if row[" Designation"].to_s.strip == header
-          content.puts "#{row["Name"]} (EmpId:#{row[" EmpId"]})\n"
-          end
-        end   
-      end 
+
+      puts content
+      # headers.each do |header|
+      #   content.puts "#{header}\n"
+      #   csv_file.each do |row|
+      #    if row[" Designation"].to_s.strip == header
+      #     content.puts "#{row["Name"]} (EmpId:#{row[" EmpId"]})\n"
+      #     end
+      #   end   
+      # end 
     end
   end
 end

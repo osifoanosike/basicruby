@@ -1,4 +1,4 @@
-require_relative '../lib/fixnum.rb'
+require_relative '../lib/integer.rb'
 
 puts "Finding Factorial: enter a integer value.. "
 
