@@ -32,12 +32,12 @@ class FileOps
   end
 
   def read_from_file(file_name)
-    file_dir = "/home/osifo/dev/trainings/basicruby/23/lib/#{file_name}"
+    file_dir = File.expand_path("../#{file_name}.csv", __FILE__)
     from_file = CSV.read("#{file_dir}", headers: true)   
   end
 
   def write_to_file(csv_file, headers)
-    file_dir = "/home/osifo/dev/trainings/basicruby/23/lib/csv_output.csv"
+    file_dir = "../lib/csv_output.txt"
 
     File.open("#{file_dir}", "w+") do |content|
       headers.each do |header|
