@@ -1,7 +1,7 @@
 class Integer
   def factorial
     if self < 0
-      "Value must be a postive integer"
+      raise "Value must be a postive integer"
     elsif self == 0
       1
     else
