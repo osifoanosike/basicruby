@@ -7,7 +7,7 @@ begin
 	firstname = gets.chomp
 
 	name = Name.new(lastname, firstname)
-	puts name.to_s
+	puts name
 rescue Exception => e
 	puts "#{e.message} \n#{e.backtrace.inspect}"
 end
