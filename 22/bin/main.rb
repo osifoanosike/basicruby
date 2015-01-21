@@ -9,5 +9,5 @@ begin
 	name = Name.new(lastname, firstname)
 	puts name
 rescue Exception => e
-	puts "#{e.message} \n#{e.backtrace.inspect}"
+	puts "#{e.message}"
 end
