@@ -22,7 +22,7 @@ class FileOps
 
   def read_write(file_name)
     from_file = read_from_file(file_name)
-    puts from_file.to_a.inspect #to group this by the row['Designation']
+    puts from_file
 
     headers = []
     from_file.group_by do |header|
@@ -36,7 +36,6 @@ class FileOps
   def read_from_file(file_name)
     file_dir = File.expand_path("../#{file_name}.csv", __FILE__)
     from_file = CSV.read("#{file_dir}", headers: true)  
-     from_file
   end
 
   def write_to_file(csv_file)
