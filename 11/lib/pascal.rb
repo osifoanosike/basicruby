@@ -13,10 +13,8 @@ class Pascal
     if max_val <= 1
       puts "Values must be greater than 1" 
     else
-      count = 0
-      while(count <= max_val)
-        triangle_row(count) { |x| puts (x) }
-        count += 1
+      for val in 0..max_val
+        triangle_row(val) { |x| puts (x) }
       end
     end
   end
