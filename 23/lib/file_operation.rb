@@ -23,33 +23,39 @@ class FileOps
   def read_write(file_name)
     from_file = read_from_file(file_name)
     headers = []
-    from_file.each do |header|
-      headers << header[" Designation"].to_s.strip!
+    from_file.group_by do |header|
+      puts header[" Designation"]
     end
     headers = pluralize(headers).uniq! #check for freq and pluralize accordingly
-    write_to_file(from_file, headers)
+    write_to_file(from_file)
 
   end
 
   def read_from_file(file_name)
     file_dir = File.expand_path("../#{file_name}.csv", __FILE__)
-    from_file = CSV.read("#{file_dir}", headers: true)   
+    from_file = CSV.read("#{file_dir}", headers: true)  
+     from_file
   end
 
-  def write_to_file(csv_file, headers)
+  def write_to_file(csv_file)
     file_dir = "../lib/csv_output.txt"
 
     File.open("#{file_dir}", "w+") do |content|
-
-      puts content
-      # headers.each do |header|
-      #   content.puts "#{header}\n"
-      #   csv_file.each do |row|
-      #    if row[" Designation"].to_s.strip == header
-      #     content.puts "#{row["Name"]} (EmpId:#{row[" EmpId"]})\n"
-      #     end
-      #   end   
-      # end 
+     csv_file.each do |row|
+        content.puts " #{row[" Designation"]} #{row["Name"]} (EmpId:#{row[" EmpId"]})\n"
+     end   
     end
   end
 end
+
+
+ # File.open("#{file_dir}", "w+") do |content|
+ #      headers.each do |header|
+ #        content.puts "#{header}\n"
+ #        csv_file.each do |row|
+ #         if row[" Designation"].to_s.strip == header
+ #          content.puts "#{row["Name"]} (EmpId:#{row[" EmpId"]})\n"
+ #          end
+ #        end   
+ #      end 
+ #    end
