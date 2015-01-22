@@ -1,8 +1,0 @@
- Developers
-Jack, 15, Developer
-John, 12, Developer
- Designers
-Mary, 13, Designer
-Jane, 17, Designer
- Tester
-Johny, 19, Tester

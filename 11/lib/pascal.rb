@@ -6,7 +6,7 @@ class Pascal
     for i in 0..max
       row_items << (max.factorial / (i.factorial * (max - i).factorial))
     end
-    yield "\n#{row_items.join(' ')}"
+    yield "\n#{ row_items.join(' ') }"
   end
 
   def draw_triangle(max_val)
@@ -15,7 +15,7 @@ class Pascal
     else
       count = 0
       while(count <= max_val)
-        triangle_row(count) { |x| print (x) }
+        triangle_row(count) { |x| puts (x) }
         count += 1
       end
     end

@@ -9,9 +9,8 @@ class FileOps
     freq
   end
 
-  def pluralize(array)
-    array[0] = "#{array[0]}s" if array[1].length > 1
-    array
+  def pluralize(role, details)
+    role = "#{role}s" if detailslength > 1
   end
 
   def read_write(file_name)
@@ -21,6 +20,7 @@ class FileOps
     grouped_records = from_file.group_by do |header|
       header[" Designation"]
     end
+    puts grouped_records.class
     write_to_file(grouped_records)
   end
 
@@ -29,12 +29,18 @@ class FileOps
     CSV.read("#{file_dir}", headers: true)  
   end
 
-  def write_to_file(csv_file)
+  def write_to_file(grouped_data)
     file_dir = File.expand_path("../csv_output.txt", __FILE__)
 
     File.open("#{file_dir}", "w+") do |content|
-     csv_file.each do |row|
-        content.puts pluralize(row)
+     grouped_data.each do |role, details|
+        if details.count > 1
+          content.puts "#{role}s\n #{details["Name"]} *** #{details["EmpId"]} <<< #{details["Designation"]}  "
+        else
+          content.puts "#{role}\n #{details}"
+        end
+        # content.puts details.count
+        # content.puts pluralize(row)
      end   
     end
   end
