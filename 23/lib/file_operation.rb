@@ -16,14 +16,11 @@ class FileOps
 
   def read_write(file_name)
     from_file = read_from_file(file_name)
-    # puts from_file.class
 
     headers = []
     grouped_records = from_file.group_by do |header|
       header[" Designation"]
     end
-    
-    # headers = pluralize(headers).uniq! #check for freq and pluralize accordingly
     write_to_file(grouped_records)
   end
 
