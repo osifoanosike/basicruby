@@ -2,11 +2,11 @@ require_relative '../../13/lib/integer.rb'
 
 class Pascal
   def triangle_row(max)
-    row_items = ""
+    row_items = []
     for i in 0..max
-      row_items += " #{(max.factorial / (i.factorial * (max - i).factorial))}"
+      row_items << (max.factorial / (i.factorial * (max - i).factorial))
     end
-    puts row_items
+    yield "\n#{row_items.join(' ')}"
   end
 
   def draw_triangle(max_val)

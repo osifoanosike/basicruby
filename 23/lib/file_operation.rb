@@ -10,7 +10,7 @@ class FileOps
         freq[elem] = 1
       end
     end
-    return freq
+    freq
   end
 
   def pluralize(array)
@@ -22,9 +22,11 @@ class FileOps
 
   def read_write(file_name)
     from_file = read_from_file(file_name)
+    puts from_file.to_a.inspect #to group this by the row['Designation']
+
     headers = []
     from_file.group_by do |header|
-      puts header[" Designation"]
+      header[" Designation"]
     end
     headers = pluralize(headers).uniq! #check for freq and pluralize accordingly
     write_to_file(from_file)
@@ -48,14 +50,3 @@ class FileOps
   end
 end
 
-
- # File.open("#{file_dir}", "w+") do |content|
- #      headers.each do |header|
- #        content.puts "#{header}\n"
- #        csv_file.each do |row|
- #         if row[" Designation"].to_s.strip == header
- #          content.puts "#{row["Name"]} (EmpId:#{row[" EmpId"]})\n"
- #          end
- #        end   
- #      end 
- #    end
