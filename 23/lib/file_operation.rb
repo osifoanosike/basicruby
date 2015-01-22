@@ -37,7 +37,6 @@ class FileOps
 
     File.open("#{file_dir}", "w+") do |content|
      csv_file.each do |row|
-        # content.puts " #{row[" Designation"]} #{row["Name"]} (EmpId:#{row[" EmpId"]})\n"
         content.puts pluralize(row)
      end   
     end
