@@ -1,5 +1,8 @@
-  Developer Jack (EmpId: 15)
-  Designer Mary (EmpId: 13)
-  Developer John (EmpId: 12)
-  Designer Jane (EmpId: 17)
-  Tester Johny (EmpId: 19)
+ Developer
+Jack, 15, Developer
+John, 12, Developer
+ Designer
+Mary, 13, Designer
+Jane, 17, Designer
+ Tester
+Johny, 19, Tester

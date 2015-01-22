@@ -22,20 +22,20 @@ class FileOps
 
   def read_write(file_name)
     from_file = read_from_file(file_name)
-    puts from_file
+    # puts from_file.class
 
     headers = []
-    from_file.group_by do |header|
+    grouped_records = from_file.group_by do |header|
       header[" Designation"]
     end
+    
     headers = pluralize(headers).uniq! #check for freq and pluralize accordingly
-    write_to_file(from_file)
-
+    write_to_file(grouped_records)
   end
 
   def read_from_file(file_name)
     file_dir = File.expand_path("../#{file_name}.csv", __FILE__)
-    from_file = CSV.read("#{file_dir}", headers: true)  
+    CSV.read("#{file_dir}", headers: true)  
   end
 
   def write_to_file(csv_file)
@@ -43,7 +43,8 @@ class FileOps
 
     File.open("#{file_dir}", "w+") do |content|
      csv_file.each do |row|
-        content.puts " #{row[" Designation"]} #{row["Name"]} (EmpId:#{row[" EmpId"]})\n"
+        # content.puts " #{row[" Designation"]} #{row["Name"]} (EmpId:#{row[" EmpId"]})\n"
+        content.puts row
      end   
     end
   end
