@@ -4,20 +4,14 @@ class FileOps
   def check_freq(array)
     freq = Hash.new(0) 
     array.each do |elem|
-      if freq.keys.grep(/#{elem}/i)
-        (freq[elem] = freq[elem] + 1)
-      else
-        freq[elem] = 1
-      end
+      freq[elem] +=  1
     end
     freq
   end
 
   def pluralize(array)
-    freq_result = check_freq(array)
-    array.each do |elem|
-      elem << "s" if freq_result[elem] > 1
-    end
+    array[0] = "#{array[0]}s" if array[1].length > 1
+    array
   end
 
   def read_write(file_name)
@@ -29,7 +23,7 @@ class FileOps
       header[" Designation"]
     end
     
-    headers = pluralize(headers).uniq! #check for freq and pluralize accordingly
+    # headers = pluralize(headers).uniq! #check for freq and pluralize accordingly
     write_to_file(grouped_records)
   end
 
@@ -39,12 +33,12 @@ class FileOps
   end
 
   def write_to_file(csv_file)
-    file_dir = "../lib/csv_output.txt"
+    file_dir = File.expand_path("../csv_output.txt", __FILE__)
 
     File.open("#{file_dir}", "w+") do |content|
      csv_file.each do |row|
         # content.puts " #{row[" Designation"]} #{row["Name"]} (EmpId:#{row[" EmpId"]})\n"
-        content.puts row
+        content.puts pluralize(row)
      end   
     end
   end
