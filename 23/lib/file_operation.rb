@@ -34,12 +34,7 @@ class FileOps
 
     File.open("#{file_dir}", "w+") do |content|
      grouped_data.each do |role, details|
-        if details.count > 1
-          content.puts "\n#{role}s"
-        else
-          content.puts "\n#{role}"
-        end
-
+        content.puts details.count > 1 ? "\n#{role}s" : "\n#{role}" #group header
         for detail in details
           content.puts "#{detail[" Designation"]} #{detail["Name"]} (EmpId:#{detail[" EmpId"]}) "
         end
