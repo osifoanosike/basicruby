@@ -35,12 +35,14 @@ class FileOps
     File.open("#{file_dir}", "w+") do |content|
      grouped_data.each do |role, details|
         if details.count > 1
-          content.puts "#{role}s\n #{details["Name"]} *** #{details["EmpId"]} <<< #{details["Designation"]}  "
+          content.puts "\n#{role}s"
         else
-          content.puts "#{role}\n #{details}"
+          content.puts "\n#{role}"
         end
-        # content.puts details.count
-        # content.puts pluralize(row)
+
+        for detail in details
+          content.puts "#{detail[" Designation"]} #{detail["Name"]} (EmpId:#{detail[" EmpId"]}) "
+        end
      end   
     end
   end
