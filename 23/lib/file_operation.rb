@@ -1,18 +1,6 @@
 class FileOps
   require 'csv'
 
-  def check_freq(array)
-    freq = Hash.new(0) 
-    array.each do |elem|
-      freq[elem] +=  1
-    end
-    freq
-  end
-
-  def pluralize(role, details)
-    role = "#{role}s" if detailslength > 1
-  end
-
   def read_write(file_name)
     from_file = read_from_file(file_name)
 
@@ -20,7 +8,6 @@ class FileOps
     grouped_records = from_file.group_by do |header|
       header[" Designation"]
     end
-    puts grouped_records.class
     write_to_file(grouped_records)
   end
 
@@ -42,4 +29,3 @@ class FileOps
     end
   end
 end
-
