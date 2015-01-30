@@ -21,9 +21,9 @@ class FileOperation
 
     File.open("#{file_dir}", "w+") do |content|
      grouped_data.each do |role, details|
-        content.puts details.count > 1 ? "\n#{role}s" : "\n#{role}" #group header
+        content.puts details.count > 1 ? "\n#{role.strip}s" : "\n#{role.strip}" #group header
         details.each do |detail|
-          content.puts "#{detail["Name"]} (EmpId:#{detail[" EmpId"]}) "
+          content.puts "#{detail["Name"]} (EmpId:#{detail[" EmpId"]})\n"
         end
      end   
     end
