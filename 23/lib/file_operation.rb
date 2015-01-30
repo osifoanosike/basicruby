@@ -1,4 +1,4 @@
-class FileOps
+class FileOperation
   require 'csv'
 
   def read_write(file_name)
@@ -22,8 +22,8 @@ class FileOps
     File.open("#{file_dir}", "w+") do |content|
      grouped_data.each do |role, details|
         content.puts details.count > 1 ? "\n#{role}s" : "\n#{role}" #group header
-        for detail in details
-          content.puts "#{detail[" Designation"]} #{detail["Name"]} (EmpId:#{detail[" EmpId"]}) "
+        details.each do |detail|
+          content.puts "\t#{detail[" Designation"]} #{detail["Name"]} (EmpId:#{detail[" EmpId"]}) "
         end
      end   
     end

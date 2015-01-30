@@ -1,11 +1,11 @@
 
  Developers
- Developer Jack (EmpId: 15) 
- Developer John (EmpId: 12) 
+   Developer Jack (EmpId: 15) 
+   Developer John (EmpId: 12) 
 
  Designers
- Designer Mary (EmpId: 13) 
- Designer Jane (EmpId: 17) 
+   Designer Mary (EmpId: 13) 
+   Designer Jane (EmpId: 17) 
 
  Tester
- Tester Johny (EmpId: 19) 
+   Tester Johny (EmpId: 19) 
