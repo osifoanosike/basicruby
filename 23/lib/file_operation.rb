@@ -23,7 +23,7 @@ class FileOperation
      grouped_data.each do |role, details|
         content.puts details.count > 1 ? "\n#{role}s" : "\n#{role}" #group header
         details.each do |detail|
-          content.puts "\t#{detail[" Designation"]} #{detail["Name"]} (EmpId:#{detail[" EmpId"]}) "
+          content.puts "#{detail["Name"]} (EmpId:#{detail[" EmpId"]}) "
         end
      end   
     end
